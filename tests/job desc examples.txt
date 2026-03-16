@@ -1,0 +1,27 @@
+1️⃣ Machine Learning Engineer
+
+Looking for a Machine Learning Engineer with experience in Python, TensorFlow, PyTorch, scikit-learn, Docker, and AWS for building and deploying scalable ML models.
+
+2️⃣ Data Scientist
+
+Looking for a Data Scientist with experience in Python, Pandas, NumPy, scikit-learn, SQL, and data visualization for analyzing large datasets and building predictive models.
+
+3️⃣ NLP Engineer
+
+Looking for an NLP Engineer with experience in Python, Transformers, Hugging Face, spaCy, PyTorch, and deep learning for building natural language processing applications.
+
+4️⃣ Backend Engineer
+
+Looking for a Backend Engineer with experience in Python, FastAPI, PostgreSQL, Docker, and REST APIs for building scalable backend systems.
+
+5️⃣ AI Engineer
+
+Looking for an AI Engineer with experience in Python, TensorFlow, PyTorch, OpenCV, and machine learning for developing intelligent automation systems.
+
+6️⃣ Data Engineer
+
+Looking for a Data Engineer with experience in Python, SQL, Apache Spark, Airflow, and AWS for building reliable data pipelines and processing large datasets.
+
+7️⃣ MLOps Engineer
+
+Looking for an MLOps Engineer with experience in Python, Docker, Kubernetes, CI/CD, and AWS for deploying and monitoring machine learning models in production.
