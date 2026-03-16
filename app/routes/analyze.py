@@ -9,6 +9,7 @@ from app.services.role_predictor import predict_roles
 from app.services.resume_feedback import generate_feedback
 from app.services.ats_scorer import calculate_ats_score
 from app.services.evidence_extractor import extract_evidence
+from app.services.resume_improver import generate_resume_improvements
 
 router = APIRouter()
 
@@ -46,6 +47,11 @@ async def analyze_resume(
     missing_skills,
     predicted_roles
 )
+    improvements = generate_resume_improvements(
+    resume_skills,
+    missing_skills,
+    predicted_roles
+)
 
     recommended_skills = recommend_skills(resume_skills)
 
@@ -59,5 +65,6 @@ async def analyze_resume(
     "recommended_skills": recommended_skills,
     "feedback": feedback,
     "ats_score": ats_score,
-    "evidence": evidence
+    "evidence": evidence,
+    "improvements": improvements
 }

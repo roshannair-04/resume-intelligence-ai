@@ -146,6 +146,18 @@ async function analyzeResume(){
   </div>
 
 
+  <!-- Resume Improvement Suggestions -->
+  <div class="bg-slate-900/70 backdrop-blur-xl p-6 rounded-xl mt-6">
+
+  <h3 class="text-xl mb-3">Resume Improvement Suggestions</h3>
+
+  <ul>
+  ${(data.improvements || []).map(i => `<li>- ${i}</li>`).join("")}
+  </ul>
+
+  </div>
+
+
   <!-- ATS Radar Chart -->
   <div class="bg-slate-900/70 backdrop-blur-xl p-6 rounded-xl mt-6">
 
