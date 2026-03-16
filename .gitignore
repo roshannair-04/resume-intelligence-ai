@@ -1,0 +1,62 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.env
+.resume/
+conda-env/
+.resume-env/
+
+# Conda
+*.conda
+*.env
+
+# HuggingFace model cache
+.cache/
+hf_cache/
+huggingface/
+
+# Data files (optional)
+*.db
+*.sqlite3
+
+# MacOS junk
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+temp_*
+*.tmp
+
+# Node modules (if you add frontend tools later)
+node_modules/
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build folders
+build/
+dist/
+
+# Python packaging
+*.egg-info/
+
+# Secrets
+.env
+.env.local
+
+# Model weights (if you add large models later)
+*.bin
+*.safetensors
+*.pt
+*.pth

@@ -41,7 +41,11 @@ async def analyze_resume(
 
     ats_score = calculate_ats_score(resume_skills, job_skills, predicted_roles)
 
-    feedback = generate_feedback(resume_skills, missing_skills)
+    feedback = generate_feedback(
+    resume_skills,
+    missing_skills,
+    predicted_roles
+)
 
     recommended_skills = recommend_skills(resume_skills)
 

@@ -1,24 +1,50 @@
-def generate_feedback(resume_skills, missing_skills):
+import json
+
+
+with open("data/role_skill_map.json") as f:
+    role_map = json.load(f)
+
+
+def generate_feedback(resume_skills, missing_skills, predicted_roles):
 
     feedback = []
 
-    if len(missing_skills) > 0:
+    if not predicted_roles:
+        return ["Unable to determine role recommendations."]
+
+    top_role = predicted_roles[0]["role"]
+
+    feedback.append(
+        f"Your profile aligns most with a {top_role} role."
+    )
+
+    # Suggest role skills
+    if top_role in role_map:
+
+        recommended = role_map[top_role]
+
+        missing_role_skills = [
+            skill for skill in recommended
+            if skill.lower() not in [s.lower() for s in resume_skills]
+        ]
+
+        if missing_role_skills:
+
+            feedback.append(
+                f"To strengthen your {top_role} profile consider learning:"
+            )
+
+            for skill in missing_role_skills[:4]:
+                feedback.append(f"• {skill}")
+
+    # Missing skills from job description
+    if missing_skills:
+
         feedback.append(
-            f"You may improve your resume by learning: {', '.join(missing_skills)}"
+            "Important skills missing for this job:"
         )
 
-    if "docker" not in resume_skills:
-        feedback.append("Consider learning Docker for modern ML deployments.")
-
-    if "aws" not in resume_skills:
-        feedback.append("Cloud skills like AWS can improve job matching.")
-
-    if "machine learning" in resume_skills and "deep learning" not in resume_skills:
-        feedback.append(
-            "Adding deep learning frameworks like PyTorch or TensorFlow could strengthen your profile."
-        )
-
-    if len(resume_skills) < 5:
-        feedback.append("Try adding more technical skills to your resume.")
+        for skill in missing_skills[:4]:
+            feedback.append(f"• {skill}")
 
     return feedback
