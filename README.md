@@ -140,6 +140,8 @@ ATS Score:
 - Projects: 18
 - Education: 14
 
+![alt text](image.png)
+![alt text](image-1.png)
 ---
 
 # Future Improvements
